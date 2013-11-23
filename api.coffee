@@ -9,7 +9,7 @@ server.get '/calculate/:action/:firstNum/:secondNum', (req, res, next) ->
 	action = req.params.action
 	firstNum = parseFloat req.params.firstNum
 	secondNum = parseFloat req.params.secondNum
-	result = 0
+	result = undefined
 	if action == 'add'
 		result = firstNum + secondNum
 	else if action == 'subtract'
