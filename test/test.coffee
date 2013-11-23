@@ -1,6 +1,6 @@
 # Import library files
-assert 	= require("assert")
-request = require("request")
+assert 	= require "assert"
+request = require "request"
 
 
 # Build Test Cases

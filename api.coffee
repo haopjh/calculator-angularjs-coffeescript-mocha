@@ -1,5 +1,24 @@
 # Import library files
 restify 		= require 'restify'
+mongoose		= require 'mongoose'
+
+# Start and verify mongodb connection
+mongoose.connect 'mongodb://localhost/test' 
+db = mongoose.connection
+db.on 'error', console.error.bind console, 'connection error:'
+db.once 'open', ->
+	console.log "Successfully connected to MongoDB"
+
+# Create schema for recording calculations
+calculationSchema = new mongoose.Schema
+	action: String
+	firstNumber: Number
+	secondNumber: Number
+	timeStamp: 
+		type: Date
+		default: Date.now
+
+Calculation = mongoose.model 'calculation', calculationSchema
 
 # Create API server to listen to requests
 server = restify.createServer()
@@ -21,6 +40,16 @@ server.get '/calculate/:action/:firstNum/:secondNum', (req, res, next) ->
 	else
 		res.send 'no such method'
 	
+	# Create Calculation object
+	cal = new Calculation
+		action: action
+		firstNumber: firstNum
+		secondNumber: secondNum
+
+	cal.save (err, cal) ->
+		# Handle Errors
+		if err then console.log 'Erorr in saving calculation'
+
 	# parseFloat is used again to correct JavaScript's arithmatic error
 	res.send {'result':parseFloat result.toPrecision 7}
 
