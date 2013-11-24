@@ -1,17 +1,18 @@
-calculator-angularjs-coffeescript-mocha
+Calculator-angularjs-coffeescript-restify-mocha
 =======================================
 
-This is a simple boilerplate of having AngularJS with Coffeescript as the front end and restify (node.js) as the backend (APIs).
+This is an calculator boilerplate which has AngularJS with Coffeescript as the front end and restify (node.js) as the backend (APIs).
 
-To run the app
-1) git clone https://github.com/haopjh/calculator-angularjs-coffeescript-mocha.git
-2) cd calculator-angularjs-coffeescript-mocha
-3) Run coffee server.coffee
-4) Enter localhost:3000/app/index.html to access the calculator
+To run the app:
 
-To run the mocha automated testing
-1) 
+- git clone https://github.com/haopjh/calculator-angularjs-coffeescript-mocha.git
+- cd calculator-angularjs-coffeescript-mocha
+- Run coffee server.coffee
+- Enter localhost:3000/app/index.html to access the calculator
 
-** Take note **
+To run the mocha automated testing, enter 'mocha --compilers coffee:coffee-script test'
+
+Calculator API's endpoint is localhost:3000/api/:action/:firstNum/:secondNum
+
+<b>Take note</b>
 - Restify is a leaner framework to provide routing for APIs as compared to Express
-- To test the api, type 'mocha --compilers coffee:coffee-script test'
