@@ -1,7 +1,7 @@
 Calculator-angularjs-coffeescript-restify-mocha
 =======================================
 
-This is an calculator boilerplate which has AngularJS with Coffeescript as the front end and restify (node.js) as the backend (APIs).
+This is a calculator boilerplate which has AngularJS with Coffeescript as the front end and restify (node.js) as the backend (APIs).
 
 To run the app:
 
