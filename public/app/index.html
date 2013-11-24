@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+
+  <div class="page-header">
+    <h1>Calculator App</h1>
+  </div>
+
+  <div ng-view></div>
+  <br />
+  <div>Angular seed app: v<span app-version></span></div>
+
+  <!-- include jquery script -->
+  <script src="lib/jquery-1.10.2.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+
+  <!-- Angularjs scripts -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  <script src="lib/coffeescript/coffee-script.js"></script>
+  <script src="coffee/controllers.coffee" type="text/coffeescript"></script>
+  <script src="coffee/app.coffee" type="text/coffeescript"></script>
+</body>
+</html>
